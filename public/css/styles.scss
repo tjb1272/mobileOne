@@ -1,0 +1,75 @@
+@mixin clearfix {
+    &:after {
+        display: table;
+        clear: both;
+        content: '';
+    }
+}
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+body {
+    margin-top: 3rem;
+}
+
+.l-wrap {
+    max-width: 1140px;
+    margin-right: auto;
+    margin-left: auto;
+}
+
+.l-sidebar-article {
+    @include clearfix;
+    .grid-item {
+        @media (min-width: 700px) {
+            padding-left: 12px;
+            padding-right: 12px;
+            float: left;
+        }
+    }
+    .l-sidebar {
+        @media (min-width: 700px) {
+            width: percentage(4/12);
+            float: left;
+        }
+        @media (min-width: 1200px) {
+            width: percentage(2/12);
+        }
+    }
+    .l-main {
+        margin-top: 20px;
+        @media (min-width: 700px) {
+            width: percentage(8/12);
+            margin-top: 0;
+            float: left;
+        }
+        @media (min-width: 1200px) {
+            width: percentage(7/12);
+        }
+    }
+}
+
+
+/* Demo purposes */
+
+.grid-inner {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 80px;
+    text-align: center;
+    background: rgba(red, 0.25);
+}
+
+.column {
+    width: calc((100% - 24px * 12) / 12);
+    margin-right: 12px;
+    margin-left: 12px;
+    background: rgba(blue, 0.25);
+    float: left;
+    height: 80px;
+}

@@ -10,7 +10,7 @@ const path = require('path');
 app.engine('handlebars', handlebars.engine);
 app.set('view engine', 'handlebars');
 
-app.use(express.static(path.join(__dirname, 'public')));
+app.use(express.static(__dirname + '/public'));
 
 //Express Session
 // app.use(session({
