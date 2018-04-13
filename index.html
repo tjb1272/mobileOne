@@ -1,27 +1,91 @@
-<div class="l-wrap">
-    <div class="l-sidebar-article">
-        <div class="grid-item l-sidebar">
-            <div class="grid-inner">Sidebar</div>
-        </div>
-        <div class="grid-item l-main">
-            <div class="grid-inner">Main article</div>
-        </div>
-    </div>
-</div>
+<!DOCTYPE html>
+<html>
 
-<div class="l-wrap">
-    <div class="fixed-gutter-grid">
-        <div class="column"></div>
-        <div class="column"></div>
-        <div class="column"></div>
-        <div class="column"></div>
-        <div class="column"></div>
-        <div class="column"></div>
-        <div class="column"></div>
-        <div class="column"></div>
-        <div class="column"></div>
-        <div class="column"></div>
-        <div class="column"></div>
-        <div class="column"></div>
+<head>
+    <title>Moble One Grid Hands One</title>
+    <style>
+        grid:after {
+            content: "";
+            display: table;
+            clear: both;
+        }
+        
+        *,
+        *:after,
+        *:before {
+            -webkit-box-sizing: border-box;
+            -moz-box-sizing: border-box;
+            box-sizing: border-box;
+        }
+        
+        .wrapper {
+            display: grid;
+            grid-gap: 1em;
+            grid-auto-rows: minmax(100px, auto);
+        }
+        
+        .wapper>div {
+            background: #eee;
+            padding: 1em;
+        }
+        
+        .wrapper>div:nth-child(odd) {
+            background: #ddd;
+        }
+        
+        .sidebar {
+            grid-column: 1/2;
+            grid-row: 1/2;
+        }
+        
+        .header {
+            grid-column: 3/12;
+            grid-row: 1/2;
+        }
+        
+        .text1 {
+            grid-column: 1/4;
+            grid-row: auto;
+        }
+        
+        .text2 {
+            grid-column: 5/8;
+            grid-row: auto;
+        }
+        
+        .text3 {
+            grid-column: 9/12;
+            grid-row: auto;
+        }
+        
+        .img1 {
+            grid-column: 1/6;
+            grid-row: auto;
+        }
+        
+        .img2 {
+            grid-column: 7/12;
+            grid-row: auto;
+        }
+        
+        .footer {
+            grid-column: 1/12;
+            grid-row: 1/1;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="wrapper">
+        <div class='sidebar'>Sidebar</div>
+        <div class='header'>Header</div>
+        <div class='text1'>Text1</div>
+        <div class='text2'>Text2</div>
+        <div class='text3'>Text3</div>
+        <div class='img1'><img src="images/1_jumping_dog.jpg" alt="One Jumping Dog" style="width:100%;"></div>
+        <div class='img2'><img src="images/2_jumping_dog.jpg" alt="Two Jumping Dog" style="width:100%;"></div>
+        <div class='footer'>Footer</div>
     </div>
-</div>
+</body>
+
+</html>
