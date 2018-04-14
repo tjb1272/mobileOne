@@ -11,6 +11,11 @@ app.get('/home', (req, res) => {
     res.render('home');
 });
 
+app.use('/images', express.static(__dirname + '/images'));
+app.engine('handlebars', handlebars.engine);
+app.set('view engine', 'handlebars');
+
+
 //BodyParsers
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: false }));

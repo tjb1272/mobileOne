@@ -4,7 +4,6 @@ grid:after {
     display: table;
     clear: both;
 }
-
 *,
 *:after,
 *:before {
@@ -12,69 +11,66 @@ grid:after {
     -moz-box-sizing: border-box;
     box-sizing: border-box;
 }
-
-.wrapper {
+.wrapper {    
     display: grid;
     grid-gap: 1em;
-    grid-auto-rows: minmax(100px, auto);
+    justify-items: stretch;
 }
-
-.wapper>div {
-    background: rgb(240, 228, 228);
+.wapper > div {
     padding: 1em;
 }
-
-.wrapper>div:nth-child(odd) {
-    background: rgb(211, 202, 202);
-}
-
 .sidebar {
-    grid-column: 1/2;
-    grid-row: 1/2;
+    grid-column: 1/3;
+    grid-row: 1/17;
+    background: rgb(126, 115, 115);
 }
-
 .header {
-    grid-column: 3/12;
-    grid-row: 1/2;
+    grid-column: 3/13;
+    grid-row: 1;
+    background: rgba(211, 202, 202, 0.931);
 }
-
 .text1 {
-    grid-column: 1/4;
-    grid-row: auto;
+    grid-column: 3/7;
+    grid-row: 2/8;
+    background: rgb(126, 115, 115);
 }
-
 .text2 {
-    grid-column: 5/8;
-    grid-row: auto;
+    grid-column: 3/7;
+    grid-row: 8/12;
+    background: rgba(211, 202, 202, 0.931);
 }
-
 .text3 {
-    grid-column: 9/12;
-    grid-row: auto;
+    grid-column: 3/7;
+    grid-row: 12/17;
+    background: rgb(126, 115, 115);
 }
-
 .img1 {
-    grid-column: 1/6;
-    grid-row: auto;
+    grid-column: 7/13;
+    grid-row: 2/9;
+    background: rgba(211, 202, 202, 0.931);
+    align-self:center;
+    max-width: 100%;
 }
-
 .img2 {
-    grid-column: 7/12;
-    grid-row: auto;
+    grid-column: 7/13;
+    grid-row: 9/17;
+    background: rgb(126, 115, 115);
+    align-self:center;
+    max-width: 100%;
 }
-
 .footer {
-    grid-column: 1/12;
-    grid-row: 1/1;
+    grid-column: 1/13;
+    grid-row: 17;
+    background: rgba(211, 202, 202, 0.931);
 }
 </style>
     <div class="wrapper">
-        <div class='sidebar'>Sidebar</div>
+        <div class='sidebar'>2 Column Sidebar</div>
         <div class='header'>Header</div>
-        <div class='text1'>Text1</div>
-        <div class='text2'>Text2</div>
-        <div class='text3'>Text3</div>
-        <div class='img1'><img-src="images/1_jumping_dog.jpg" alt="One Jumping Dog" style="width:100%;"></div>
-        <div class='img2'><img-src="images/2_jumping_dog.jpg" alt="Two Jumping Dog" style="width:100%;"></div>
+        <div class='text1'>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sed ea cupiditate commodi nulla officia molestias dolore explicabo. Molestias voluptatum nam consequatur illum ex, tenetur voluptatem eveniet optio quos ullam, accusamus cupiditate dolorum quasi atque deserunt iure omnis a. Aperiam facere iste soluta consequatur distinctio, nostrum impedit exercitationem est iusto repellat non! Molestiae, aut distinctio ullam fugiat recusandae earum blanditiis iure mollitia dolores nesciunt, ratione maiores laudantium quod exercitationem sint dolorum hic sunt harum. Exercitationem expedita cupiditate ipsum quaerat beatae. Neque.</div>
+        <div class='text2'>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquid, nihil! Magnam, unde? Quod facere porro, accusantium voluptatibus quos impedit temporibus maiores, tempore quibusdam molestiae quia asperiores, cupiditate illum quasi. Quisquam?</div>
+        <div class='text3'>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nulla ullam quasi quidem debitis facere totam, repellat aliquid dolor laudantium pariatur culpa fugiat dolorem rerum dolore hic ab voluptatem placeat dolores eum molestias repudiandae illum dolorum modi ex. Voluptatibus dolor, perferendis natus nostrum ipsum quo. Et doloremque libero modi, iusto dolores maiores id, fuga deleniti assumenda architecto a sequi recusandae eos.</div>
+        <div class='img1'><img src="images/1_jumping_dog.jpg"></div>
+        <div class='img2'><img src="images/2_jumping_dog.jpg"></div>
         <div class='footer'>Footer</div>
     </div>
