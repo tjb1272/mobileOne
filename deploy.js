@@ -75,15 +75,15 @@ function sshConnect() {
     console.log("Connecting to the server...");
 
     ssh.connect({
-            // TODO: ADD YOUR IP ADDRESS BELOW (e.g. '12.34.5.67')
-            host: '13.58.20.64',
+            // IP ADDRESS BELOW (e.g. '12.34.5.67')
+            host: '18.219.177.102',
             username: 'ubuntu',
             privateKey: 'ds-key.pem'
         })
         .then(function() {
             console.log("SSH Connection established.");
 
-            // Create "hackathon-starter-temp" directory on remote server
+            // Create "mobileOne-temp" directory on remote server
             console.log("Creating `mobileOne-temp` folder.");
 
             return createRemoteTempFolder();
